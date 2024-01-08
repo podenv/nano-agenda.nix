@@ -1,0 +1,95 @@
+{
+  "nodes": {
+    "flake-utils": {
+      "inputs": {
+        "systems": "systems"
+      },
+      "locked": {
+        "lastModified": 1701680307,
+        "narHash": "sha256-kAuep2h5ajznlPMD9rnQyffWG8EM/C73lejGofXvdM8=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "4022d587cbbfd70fe950c1e2083a02621806a725",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "nano-agenda": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1681725938,
+        "narHash": "sha256-jvCO2vw76wz6mWhYjvLCRzOC0UM2i2zlBUPdQPX78rc=",
+        "owner": "rougier",
+        "repo": "nano-agenda",
+        "rev": "3d1e280fd94ac1abd630d0c100a860b94472836d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "rougier",
+        "repo": "nano-agenda",
+        "type": "github"
+      }
+    },
+    "nano-emacs": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1694425853,
+        "narHash": "sha256-LmPj48mNpo4aa5O8iZzlKJfa0L804E7vm+QU7/SEV4M=",
+        "owner": "rougier",
+        "repo": "nano-emacs",
+        "rev": "b8631088220dbbcd885ad1353bdc52b569655f85",
+        "type": "github"
+      },
+      "original": {
+        "owner": "rougier",
+        "repo": "nano-emacs",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1704194953,
+        "narHash": "sha256-RtDKd8Mynhe5CFnVT8s0/0yqtWFMM9LmCzXv/YKxnq4=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "bd645e8668ec6612439a9ee7e71f7eac4099d4f6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "flake-utils": "flake-utils",
+        "nano-agenda": "nano-agenda",
+        "nano-emacs": "nano-emacs",
+        "nixpkgs": "nixpkgs"
+      }
+    },
+    "systems": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
