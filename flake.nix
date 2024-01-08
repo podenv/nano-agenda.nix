@@ -2,7 +2,7 @@
   description = "nano-agenda";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs";
     flake-utils.url = "github:numtide/flake-utils";
     nano-emacs.url = "github:rougier/nano-emacs";
     nano-agenda.url = "github:rougier/nano-agenda";
