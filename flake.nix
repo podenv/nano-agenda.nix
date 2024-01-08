@@ -19,7 +19,7 @@
             [ pkgs.iosevka pkgs.noto-fonts-emoji pkgs.roboto pkgs.fira-code ];
         };
 
-        emacs = pkgs.emacsWithPackages (epkgs: [
+        emacs = (pkgs.emacsPackagesFor pkgs.emacs-nox).emacsWithPackages (epkgs: [
           (pkgs.runCommand "nano-emacs" { } ''
             mkdir -p $out/share/emacs/site-lisp
             cp ${nano-emacs}/quick-help.org ${nano-emacs}/*.el $out/share/emacs/site-lisp/
@@ -35,9 +35,14 @@
           epkgs.nano-agenda
         ]);
 
+        # for regular emacs
         emacs-wrapper = pkgs.writeScriptBin "nano-emacs" ''
           #!/bin/sh
           exec env FONTCONFIG_FILE=${fonts} ${emacs}/bin/.emacs-wrapped --load ${self}/default.el $*
         '';
-      in { defaultPackage = emacs-wrapper; });
+        nox-wrapper = pkgs.writeScriptBin "nano-emacs" ''
+          #!/bin/sh
+          exec ${emacs}/bin/.emacs-wrapped --load ${self}/default.el $*
+        '';
+      in { defaultPackage = nox-wrapper; });
 }
