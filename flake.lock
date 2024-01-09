@@ -21,15 +21,16 @@
     "nano-agenda": {
       "flake": false,
       "locked": {
-        "lastModified": 1681725938,
-        "narHash": "sha256-jvCO2vw76wz6mWhYjvLCRzOC0UM2i2zlBUPdQPX78rc=",
+        "lastModified": 1704809002,
+        "narHash": "sha256-C67lnYojzEgb/UwJn5n9ZchT1HyYF8eF9U5m47zXrAI=",
         "owner": "rougier",
         "repo": "nano-agenda",
-        "rev": "3d1e280fd94ac1abd630d0c100a860b94472836d",
+        "rev": "26b5b8331527b972ebe87264537a49d146b021f1",
         "type": "github"
       },
       "original": {
         "owner": "rougier",
+        "ref": "rewrite",
         "repo": "nano-agenda",
         "type": "github"
       }

@@ -5,7 +5,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs";
     flake-utils.url = "github:numtide/flake-utils";
     nano-emacs.url = "github:rougier/nano-emacs";
-    nano-agenda.url = "github:rougier/nano-agenda";
+    nano-agenda.url = "github:rougier/nano-agenda/rewrite";
     nano-agenda.flake = false;
   };
 
@@ -26,8 +26,9 @@
             # remove load-path update
             sed -e '/load-path/d' -i $out/share/emacs/site-lisp/nano.el
             # apply new agenda
-            cp ${nano-agenda}/*.el $out/share/emacs/site-lisp/
+            cp -f ${nano-agenda}/*.el $out/share/emacs/site-lisp/
           '')
+          epkgs.svg-lib
           epkgs.org-ql
           epkgs.magit
           epkgs.company
