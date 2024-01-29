@@ -26,7 +26,7 @@
             # remove load-path update
             sed -e '/load-path/d' -i $out/share/emacs/site-lisp/nano.el
             # apply new agenda
-            cp ${nano-agenda}/*.el $out/share/emacs/site-lisp/
+            cp -f ${nano-agenda}/*.el $out/share/emacs/site-lisp/
           '')
           epkgs.org-ql
           epkgs.magit
